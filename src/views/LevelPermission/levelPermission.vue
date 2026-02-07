@@ -153,6 +153,8 @@ const handleOpenDialog = async (type, row = null) => {
     const permRes = await getRolePermsAPI(row.id)
     if (permRes.code === 200) {
       nextTick(() => {
+        console.log('测试新增未知');
+        
         treeRef.value?.setCheckedKeys(permRes.data, false)
       })
     }
