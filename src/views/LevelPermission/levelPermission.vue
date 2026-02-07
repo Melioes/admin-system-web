@@ -149,12 +149,16 @@ const handleOpenDialog = async (type, row = null) => {
     nextTick(() => {
       const defaultKeys = [1] 
       treeRef.value?.setCheckedKeys(defaultKeys, false)
+      
     })
   } else {
     currentRole.value = { ...row }
     const permRes = await getRolePermsAPI(row.id)
     if (permRes.code === 200) {
       nextTick(() => {
+        // console.log('个人测试新增一个打印');
+        console.log("在zhongwei/dev分支 nextTick函数新增了一个打印");
+        
         treeRef.value?.setCheckedKeys(permRes.data, false)
       })
     }
