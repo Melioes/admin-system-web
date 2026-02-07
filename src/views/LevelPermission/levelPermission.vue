@@ -140,6 +140,8 @@ const handleOpenDialog = async (type, row = null) => {
   if (type === 'add') {
     // 新增：重置code字段
     console.log('点击了新增按钮');
+    console.log('完成了新增功能');
+    
     
     currentRole.value = { id: null, name: '', code: '', description: '' }
     nextTick(() => {
