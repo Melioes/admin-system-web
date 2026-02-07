@@ -141,6 +141,8 @@ const handleOpenDialog = async (type, row = null) => {
     // 新增：重置code字段
     console.log('点击了新增按钮');
     console.log('完成了新增功能');
+    console.log('同事改的代码');
+    
     
     
     currentRole.value = { id: null, name: '', code: '', description: '' }
